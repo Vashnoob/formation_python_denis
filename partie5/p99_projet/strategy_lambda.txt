@@ -1,0 +1,30 @@
+### ✅ Strategie simplifiée avec une fonction lambda
+
+class TrajetAvecStrategie:
+    def __init__(self, depart, arrivee, distance, strategie_duree):
+        self.depart = depart
+        self.arrivee = arrivee
+        self.distance = distance
+        self.strategie_duree = strategie_duree  # une fonction
+
+    def calculer_duree(self):
+        return self.strategie_duree(self.distance)
+
+    def afficher(self):
+        print(f"{self.depart} → {self.arrivee} : {self.distance} km")
+        print(f"Durée estimée : {self.calculer_duree():.2f} h")
+
+# ✅ définition des stratégies
+
+normale = lambda d: d / 80
+express = lambda d: d / 150
+eco = lambda d: d / 50
+
+# ✅ création des trajets
+t1 = TrajetAvecStrategie("Paris", "Lyon", 460, normale)
+t2 = TrajetAvecStrategie("Paris", "Marseille", 750, express)
+t3 = TrajetAvecStrategie("Lyon", "Nice", 470, eco)
+
+t1.afficher()
+t2.afficher()
+t3.afficher()

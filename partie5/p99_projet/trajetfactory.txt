@@ -1,0 +1,36 @@
+# 🧱 Étape 1 : la Factory
+
+from trajet import Trajet
+from trajet_express import TrajetExpress
+
+class TrajetFactory:
+    @staticmethod
+    def creer_trajet(type_, depart, arrivee, distance):
+        type_ = type_.lower()
+        if type_ == "express":
+            return TrajetExpress(depart, arrivee, distance)
+        elif type_ == "normal":
+            return Trajet(depart, arrivee, distance)
+        else:
+            raise ValueError(f"Type de trajet inconnu : {type_}")
+
+
+# 🧪 Étape 2 : Utilisation dans le code
+from factory import TrajetFactory
+
+# Entrées utilisateur simulées
+type_trajet = "express"
+depart = "Paris"
+arrivee = "Lyon"
+distance = 460
+
+# Création via la fabrique
+trajet = TrajetFactory.creer_trajet(type_trajet, depart, arrivee, distance)
+print(trajet)
+
+"""
+✅ Avantages
+Le code client n’a pas besoin de connaître les classes Trajet ou TrajetExpress.
+Ajout d’un type futur (ex : TrajetÉcologique) sans modifier le reste du programme.
+Bon point de départ pour introduire des inputs utilisateur ou des interfaces graphiques.
+"""

@@ -1,0 +1,11 @@
+
+[project]
+name = "projet7"
+version = "0.1.0"
+description = "Système de gestion de trajets et réservations (exercice pédagogique)"
+authors = [{name = "Formateur Python"}]
+dependencies = []
+requires-python = ">=3.8"
+
+[tool.setuptools.packages.find]
+where = ["projet7"]

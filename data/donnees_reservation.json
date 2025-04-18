@@ -1,0 +1,41 @@
+{
+    "trajets": [
+        {
+            "type": "Trajet",
+            "depart": "Paris",
+            "arrivee": "Lyon",
+            "distance": 460
+        },
+        {
+            "type": "TrajetExpress",
+            "depart": "Paris",
+            "arrivee": "Marseille",
+            "distance": 750
+        },
+        {
+            "type": "Trajet",
+            "depart": "Lyon",
+            "arrivee": "Nice",
+            "distance": 470
+        }
+    ],
+    "utilisateurs": [
+        {
+            "nom": "Alice",
+            "reservations": [
+                {
+                    "type": "Trajet",
+                    "depart": "Paris",
+                    "arrivee": "Lyon",
+                    "distance": 460
+                },
+                {
+                    "type": "TrajetExpress",
+                    "depart": "Paris",
+                    "arrivee": "Marseille",
+                    "distance": 750
+                }
+            ]
+        }
+    ]
+}

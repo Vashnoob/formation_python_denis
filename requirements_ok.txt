@@ -1,0 +1,8 @@
+pandas
+requests
+Faker
+requests
+numpy
+matplotlib
+PySide6
+wkhtmltopdf
